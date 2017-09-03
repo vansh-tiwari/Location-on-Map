@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="location" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-OA-Jv2">
+                                <rect key="frame" x="0.0" y="20" width="414" height="621"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="365" id="xB0-z9-tkU"/>
+                                </constraints>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-ml-SZU">
+                                <rect key="frame" x="20" y="649" width="59.333333333333329" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-ui-HWj">
+                                        <rect key="frame" x="0.0" y="0.0" width="59.333333333333329" height="20.666666666666629"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Altitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP8-G2-BW1">
+                                        <rect key="frame" x="0.0" y="35.666666666666629" width="59.333333333333329" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="csg-9Y-KdU"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rpa-nP-EzQ">
+                                <rect key="frame" x="334.33333333333331" y="649" width="59.333333333333371" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Speed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjP-Yr-bdV">
+                                        <rect key="frame" x="0.0" y="0.0" width="59.333333333333371" height="20.666666666666629"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Altitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79w-Lh-3eM">
+                                        <rect key="frame" x="0.0" y="35.666666666666629" width="59.333333333333371" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9YH-AC-ERE"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rpa-nP-EzQ" firstAttribute="top" secondItem="ygN-OA-Jv2" secondAttribute="bottom" constant="8" id="2GG-BT-4eR"/>
+                            <constraint firstItem="Gh9-ml-SZU" firstAttribute="top" secondItem="ygN-OA-Jv2" secondAttribute="bottom" constant="8" id="QQp-ED-ipT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rpa-nP-EzQ" secondAttribute="bottom" constant="31" id="UNB-6v-ugQ"/>
+                            <constraint firstItem="ygN-OA-Jv2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hyG-zT-ugw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gh9-ml-SZU" secondAttribute="bottom" constant="31" id="olm-Jd-a2z"/>
+                            <constraint firstAttribute="trailing" secondItem="ygN-OA-Jv2" secondAttribute="trailing" id="qLy-sA-R92"/>
+                            <constraint firstItem="ygN-OA-Jv2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vOZ-VY-Fsy"/>
+                            <constraint firstItem="Gh9-ml-SZU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vln-pC-OLO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rpa-nP-EzQ" secondAttribute="trailing" constant="0.5" id="zfh-E2-67m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alt" destination="79w-Lh-3eM" id="cHt-KL-GCR"/>
+                        <outlet property="map" destination="ygN-OA-Jv2" id="gEG-MG-U4N"/>
+                        <outlet property="speed" destination="RjP-Yr-bdV" id="JHP-O3-ROM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="120"/>
+        </scene>
+    </scenes>
+</document>
